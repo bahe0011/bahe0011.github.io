@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(20, 105, 179);
+}
+
+/* changing color of header bg */ 
+
+header{
+    background-color: azure;
+    padding: 20px;
+    margin: 20px;
+}
+
+p{
+    color: darkcyan;
+}
+
+h1, h2, h3{
+    text-decoration: underline;
+}
+
+section p{
+    border: 2px solid black;
+}
+
+/* using id to target an element */
+.imp-ara{
+    /*text-transform: uppercase; */
+    background-color: darkgoldenrod;
+    color: aliceblue;
+}
+
+section ul li:nth/:nth-child(odd){
+    Background/color
+}
