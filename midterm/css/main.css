@@ -1,0 +1,185 @@
+/* -------------------------
+  base
+-------------------------- */
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #aad4cf; /* light teal background (like mockup) */
+  color: #111;
+}
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: rgba(255,255,255,0.25);
+}
+
+/* -------------------------
+  header hero
+  requirement: background image + text overlay (position)
+-------------------------- */
+.hero{
+  /* background property used to add the image */
+  background-image: url("../images/lone-starfish-wide.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  min-height: 240px;
+
+  /* Position context for overlay */
+  position: relative;
+}
+
+/* Text overlay using position */
+.hero-title{
+  margin: 0;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* -------------------------
+  navigation
+-------------------------- */
+.site-nav{
+  background: rgba(255,255,255,0.35);
+  padding: 0; /* el mock se ve bien apretado */
+}
+
+.nav-list{
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  max-width: 980px;   /* mismo ancho del contenido */
+  display: flex;
+}
+
+.nav-list li{
+  flex: 1;                 /* 3 columnas iguales */
+  text-align: center;
+  padding: 0.9rem 0;       /* altura del nav */
+}
+
+/* líneas verticales entre items */
+.nav-list li:not(:last-child){
+  border-right: 1px solid rgba(0,0,0,0.35);
+}
+
+.nav-list a{
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* -------------------------
+  typography
+-------------------------- */
+h2{
+  margin: 1rem 0 0.75rem;
+  font-size: 1.8rem;
+}
+
+p{
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+/* -------------------------
+  article image + text wrapping
+  requirement: text wraps around the image
+-------------------------- */
+.story-image{
+  width: 220px;
+  height: auto;
+  float: left;
+  margin: 0 1rem 1rem 0;
+  border: 2px solid rgba(0,0,0,0.15);
+}
+
+/* -------------------------
+  facts list (proper syntax)
+-------------------------- */
+.facts{
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+
+.facts li{
+  margin: 0.25rem 0;
+}
+
+/* -------------------------
+  form
+  requirement: labels linked to inputs (handled in HTML)
+-------------------------- */
+.contact-box{
+  border: 2px solid rgba(0,0,0,0.35);
+  padding: 1rem;
+  background: rgba(255,255,255,0.15);
+}
+
+.field{
+  margin-bottom: 1rem;
+}
+
+label{
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: #fff;
+  font: inherit;
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+}
+
+.radio{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 1rem;
+  font-weight: 400;
+}
+
+button{
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.35);
+  background: #e6f0ee;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* -------------------------
+  footer
+-------------------------- */
+.site-footer{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: right;
+  color: rgba(0,0,0,0.75);
+}
